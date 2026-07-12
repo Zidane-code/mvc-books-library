@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= pageTitle %>
+    </title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body class="page">
+
+    <header class="site-header">
+        <nav class="site-nav">
+            <a class="nav-link" href="/books">Books</a>
+            <a class="nav-link nav-link--active" href="/admin/add-book">Add Book</a>
+        </nav>
+    </header>
+    <main class="page-content page-content--narrow">
+        <form class="book-form" action="/admin/add-book" method="post">
+            <div class="form-field">
+                <label for="title">Book title</label>
+                <input class="form-input" id="title" type="text" name="title">
+            </div>
+            <div class="form-field">
+                <label for="author">Author</label>
+                <input class="form-input" id="author" type="text" name="author">
+            </div>
+            <button class="button" type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+
+</html>

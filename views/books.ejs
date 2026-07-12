@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= pageTitle %>
+    </title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body class="page">
+    <header class="site-header">
+        <nav class="site-nav">
+            <a class="nav-link nav-link--active" href="/books">Books</a>
+            <a class="nav-link" href="/admin/add-book">Add Book</a>
+        </nav>
+    </header>
+    <main class="page-content">
+        <% if (hasBooks) { %>
+            <div class="book-grid">
+                <% for(let book of books) { %>
+                    <article class="book-card">
+                        <header class="book-card__header">
+                            <h1 class="book-card__title">
+                                <%= book.title %>
+                            </h1>
+                        </header>
+                        <div class="book-card__image-wrap">
+                            <img class="book-card__image" src="/images/book_image.jpeg" alt="book photo">
+                        </div>
+                        <div class="book-card__details">
+                            <h2 class="book-card__author">
+                                <%= book.author %>
+                            </h2>
+                        </div>
+                    </article>
+                    <% } %>
+            </div>
+            <% } else { %>
+                <h1 class="empty-state">No books added</h1>
+                <% } %>
+    </main>
+</body>
+
+</html>
