@@ -62,7 +62,7 @@ mvc-books-library/
 │   └── book.js
 │
 ├── routes/
-│   ├── admin.js
+│   ├── add-book.js
 │   └── books.js
 │
 ├── views/
@@ -185,9 +185,8 @@ For example, a new book is not written until the existing books have finished lo
 getBooksFromFile((books) => {
   books.push(this);
 
-  fs.writeFile(filePath, JSON.stringify(books), (err) => {
-    onSaveFinished(err);
-  });
+  fs.writeFile(p, JSON.stringify(books), (err) => {
+  cb(err);
 });
 ```
 
