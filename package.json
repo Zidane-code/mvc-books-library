@@ -1,14 +1,14 @@
 {
   "name": "mvc-books-library",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple MVC books library built with Node.js, Express, EJS, and JSON file storage.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
     "dev": "nodemon app.js"
   },
-  "author": "",
+  "author": "Zidane-code",
   "license": "ISC",
   "dependencies": {
     "ejs": "^6.0.1",
